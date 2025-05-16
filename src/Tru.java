@@ -40,7 +40,7 @@ public class Tru extends javax.swing.JFrame {
             }
         });
 
-        btnTru.setText("jButton1");
+        btnTru.setText("Trừ");
         btnTru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTruActionPerformed(evt);
