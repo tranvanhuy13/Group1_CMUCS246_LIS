@@ -7,12 +7,12 @@
  *
  * @author Admin
  */
-public class Cong extends javax.swing.JFrame {
+public class Tru extends javax.swing.JFrame {
 
     /**
-     * Creates new form Cong
+     * Creates new form Tru
      */
-    public Cong() {
+    public Tru() {
         initComponents();
     }
 
@@ -25,12 +25,14 @@ public class Cong extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblKetQua = new javax.swing.JLabel();
         txtA = new javax.swing.JTextField();
         txtB = new javax.swing.JTextField();
-        lblKetQua = new javax.swing.JLabel();
-        btnCong = new javax.swing.JButton();
+        btnTru = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lblKetQua.setText("Kết quả :");
 
         txtA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -38,18 +40,10 @@ public class Cong extends javax.swing.JFrame {
             }
         });
 
-        txtB.addActionListener(new java.awt.event.ActionListener() {
+        btnTru.setText("jButton1");
+        btnTru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBActionPerformed(evt);
-            }
-        });
-
-        lblKetQua.setText("Kết quả :");
-
-        btnCong.setText("Cộng");
-        btnCong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCongActionPerformed(evt);
+                btnTruActionPerformed(evt);
             }
         });
 
@@ -58,29 +52,29 @@ public class Cong extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
+                .addGap(147, 147, 147)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblKetQua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtB, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                    .addComponent(txtA))
-                .addContainerGap(143, Short.MAX_VALUE))
+                    .addComponent(txtA)
+                    .addComponent(txtB, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnCong)
-                .addGap(45, 45, 45))
+                .addComponent(btnTru)
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addComponent(btnCong)
-                .addGap(16, 16, 16)
-                .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(lblKetQua, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(btnTru)
+                .addGap(13, 13, 13)
+                .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(lblKetQua, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,21 +84,17 @@ public class Cong extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAActionPerformed
 
-    private void txtBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBActionPerformed
+    private void btnTruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTruActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtBActionPerformed
-
-    private void btnCongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCongActionPerformed
-        // TODO add your handling code here:
-                try {
+        try {
     int a = Integer.parseInt(txtA.getText());
     int b = Integer.parseInt(txtB.getText());
-    int tong = a + b;
-    lblKetQua.setText("Kết quả: " + tong);
+    int hieu = a - b;
+    btnTru.setText("Kết quả: " + hieu);
 } catch (NumberFormatException e) {
     lblKetQua.setText("Vui lòng nhập số hợp lệ!");
 }
-    }//GEN-LAST:event_btnCongActionPerformed
+    }//GEN-LAST:event_btnTruActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,26 +113,26 @@ public class Cong extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tru.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tru.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tru.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cong.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tru.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cong().setVisible(true);
+                new Tru().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCong;
+    private javax.swing.JButton btnTru;
     private javax.swing.JLabel lblKetQua;
     private javax.swing.JTextField txtA;
     private javax.swing.JTextField txtB;
