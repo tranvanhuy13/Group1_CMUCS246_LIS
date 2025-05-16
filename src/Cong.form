@@ -30,10 +30,12 @@
                   <Component id="txtB" pref="102" max="32767" attributes="0"/>
                   <Component id="txtA" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="143" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <Component id="btnTru" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="154" max="32767" attributes="0"/>
               <Component id="btnCong" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
           </Group>
@@ -45,7 +47,10 @@
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Component id="txtA" min="-2" pref="33" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Component id="btnCong" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnCong" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTru" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="txtB" min="-2" pref="42" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -77,6 +82,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCongActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTru">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tr&#x1eeb;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTruActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

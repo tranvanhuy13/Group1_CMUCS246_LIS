@@ -29,6 +29,7 @@ public class Cong extends javax.swing.JFrame {
         txtB = new javax.swing.JTextField();
         lblKetQua = new javax.swing.JLabel();
         btnCong = new javax.swing.JButton();
+        btnTru = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +54,13 @@ public class Cong extends javax.swing.JFrame {
             }
         });
 
+        btnTru.setText("Trừ");
+        btnTru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTruActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,9 +71,11 @@ public class Cong extends javax.swing.JFrame {
                     .addComponent(lblKetQua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtB, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
                     .addComponent(txtA))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(57, 57, 57)
+                .addComponent(btnTru)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(btnCong)
                 .addGap(45, 45, 45))
         );
@@ -75,7 +85,9 @@ public class Cong extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
-                .addComponent(btnCong)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCong)
+                    .addComponent(btnTru))
                 .addGap(16, 16, 16)
                 .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
@@ -105,6 +117,18 @@ public class Cong extends javax.swing.JFrame {
     lblKetQua.setText("Vui lòng nhập số hợp lệ!");
 }
     }//GEN-LAST:event_btnCongActionPerformed
+
+    private void btnTruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTruActionPerformed
+        // TODO add your handling code here:
+        try {
+    int a = Integer.parseInt(txtA.getText());
+    int b = Integer.parseInt(txtB.getText());
+    int hieu = a - b;
+    lblKetQua.setText("Kết quả: " + hieu);
+} catch (NumberFormatException e) {
+   lblKetQua.setText("Vui lòng nhập số hợp lệ!");
+}
+    }//GEN-LAST:event_btnTruActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +167,7 @@ public class Cong extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCong;
+    private javax.swing.JButton btnTru;
     private javax.swing.JLabel lblKetQua;
     private javax.swing.JTextField txtA;
     private javax.swing.JTextField txtB;
